@@ -1,0 +1,1 @@
+MultipleCameraTracking.exe -d config.cfg -p Whether_Calculate_Tracking_Error=0

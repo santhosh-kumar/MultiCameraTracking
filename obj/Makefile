@@ -21,7 +21,7 @@ SOURCES=$(wildcard $(SRCDIR)/*.cpp)
 OBJECTS_TMP := $(SOURCES:.cpp=.o)
 OBJECTS := $(subst src,obj, $(OBJECTS_TMP))
 
-EXECUTABLE = Tracker
+EXECUTABLE = MultipleCameraTracking
 
 all: $(OBJECTS) $(EXECUTABLE)
 
