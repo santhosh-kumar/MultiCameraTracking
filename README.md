@@ -1,5 +1,5 @@
 
-A multi-camera tracking algorithm using OpenCV. It depends on OpenCv (http://opencv.org/), Boost libraries (http://www.boost.org/) and Intel IPP ().
+A multi-camera tracking algorithm using OpenCV. It depends on OpenCv 2.3.1 (http://opencv.org/), Boost libraries (http://www.boost.org/) and Intel IPP (https://software.intel.com/en-us/intel-ipp).
 
 Usage
 ------------
@@ -9,6 +9,10 @@ In order to the tracker, use the following command:
 ### Windows ###
 
 MultiCameraTracker.exe -d config.cfg
+
+(or)
+
+MultiCameraTracker.bat
 
 ### Linux ###
 
@@ -44,3 +48,6 @@ If you use the code in any of your research works, please cite the following pap
   organization={IEEE}
 }
 ~~~
+
+### Disclaimer ###
+I may have used some good codes from various sources, please feel free to notify to me if you find a piece of code that I need to acknowledge.
