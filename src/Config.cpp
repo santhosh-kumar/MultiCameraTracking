@@ -8,7 +8,7 @@ namespace MultipleCameraTracking
     bool            g_detailedLog, g_verboseMode;
     
     // Mapping_Map Syntax:
-    // {NAMEinConfigFile,                   &g_configInput.VariableName,                    Type,   InitialValue,    LimitType,    MinLimit,    MaxLimit}
+    // {NAMEinConfigFile,                               &g_configInput.VariableName,                                  Type,InitialValue,LimitType,MinLimit,MaxLimit}
     // Types : {0:int, 1:text, 2: double}
     // LimitType: {0:none, 1:both, 2:minimum, 3: for special case}
     // We could separate this based on types to make it more flexible and allow also defaults for text types.
@@ -16,80 +16,80 @@ namespace MultipleCameraTracking
 
     Mapping Map[] = {
         //Input Information  
-        {"Input_Directory_Name",            &g_configInput.m_inputDirectoryNameCstr,        1,      0.0,            0,            0,            0},
-        {"Initialization_Name",                &g_configInput.m_intializationDirectoryCstr,    1,      0.0,            0,            0,            0},
-        {"Input_Data_FilesName",            &g_configInput.m_dataFilesNameCstr,                1,      0.0,            0,            0,            0},
-        {"Camera_Set",                        &g_configInput.m_cameraSetCstr,                    1,      0.0,            0,            0,            0},
-        {"Object_Set",                        &g_configInput.m_objectSetCstr,                    1,      0.0,            0,            0,            0},        
-        {"Load_Video_With_Color",            &g_configInput.m_loadVideoWithColor,            0,      0,                1,            0,            1},
-        {"Load_Video_From_Images",            &g_configInput.m_loadVideoFromImgs,                0,      1,                1,            0,            1},        
-        {"Number_of_Frames",                &g_configInput.m_numOfFrames,                    0,        1,                2,            1,            0},
-        {"Starting_Frame_Index",            &g_configInput.m_startFrameIndex,                0,        1,                2,            1,            0},
-        {"Enable_Interative_Mode",            &g_configInput.m_interactiveModeEnabled,            0,      0,                1,            0,            1},
+        {"Input_Directory_Name",                        &g_configInput.m_inputDirectoryNameCstr,                        1,      0.0,        0,      0,      0},
+        {"Initialization_Name",                         &g_configInput.m_intializationDirectoryCstr,                    1,      0.0,        0,      0,      0},
+        {"Input_Data_FilesName",                        &g_configInput.m_dataFilesNameCstr,                             1,      0.0,        0,      0,      0},
+        {"Camera_Set",                                  &g_configInput.m_cameraSetCstr,                                 1,      0.0,        0,      0,      0},
+        {"Object_Set",                                  &g_configInput.m_objectSetCstr,                                 1,      0.0,        0,      0,      0},        
+        {"Load_Video_With_Color",                       &g_configInput.m_loadVideoWithColor,                            0,      0,          1,      0,      1},
+        {"Load_Video_From_Images",                      &g_configInput.m_loadVideoFromImgs,                             0,      1,          1,      0,      1},        
+        {"Number_of_Frames",                            &g_configInput.m_numOfFrames,                                   0,      1,          2,      1,      0},
+        {"Starting_Frame_Index",                        &g_configInput.m_startFrameIndex,                               0,      1,          2,      1,      0},
+        {"Enable_Interative_Mode",                      &g_configInput.m_interactiveModeEnabled,                        0,      0,          1,      0,      1},
 
         //Output Information
-        {"Trial_Number",                    &g_configInput.m_trialNumber,                    0,      1,                2,            1,            0},
-        {"Enable_Verbose_Mode",                &g_configInput.m_verboseMode,                    0,      1,                1,            0,            1},
-        {"Enalbe_Detailed_Log",                &g_configInput.m_detailedLogging,                0,      1,                1,            0,            1},        
-        {"Output_Directory_Name",            &g_configInput.m_outputDirectoryNameCstr,        1,      0,              0,            0,            0},
-        {"Whether_Save_Output_Video",        &g_configInput.m_saveOutputVideo,                0,      0,                1,          0,            1},  
-        {"Whether_Display_Training_Samples",&g_configInput.m_displayTrainingSamples,        0,      0,                1,          0,            1},  
-        {"Display_Training_Center_Only",    &g_configInput.m_displayTrainingExampCenterOnly,0,      0,                1,          0,            1},  
-        {"Whether_Save_Training_Samples",    &g_configInput.m_saveTrainingSamplesVideo,        0,      0,                1,          0,            1},  
-        {"Whether_Display_Output_Video",    &g_configInput.m_displayOutputVideo,            0,      0,                1,          0,            1},  
-        {"Wait_Before_TrackingEnd",            &g_configInput.m_waitBeforeFinishTracking,        0,        0,                1,            0,            1},        
-        {"Whether_Calculate_Tracking_Error",&g_configInput.m_calculateTrackingError,        0,      0,                1,          0,            1},  
+        {"Trial_Number",                                &g_configInput.m_trialNumber,                                   0,      1,          2,      1,      0},
+        {"Enable_Verbose_Mode",                         &g_configInput.m_verboseMode,                                   0,      1,          1,      0,      1},
+        {"Enalbe_Detailed_Log",                         &g_configInput.m_detailedLogging,                               0,      1,          1,      0,      1},        
+        {"Output_Directory_Name",                       &g_configInput.m_outputDirectoryNameCstr,                       1,      0,          0,      0,      0},
+        {"Whether_Save_Output_Video",                   &g_configInput.m_saveOutputVideo,                               0,      0,          1,      0,      1},  
+        {"Whether_Display_Training_Samples",            &g_configInput.m_displayTrainingSamples,                        0,      0,          1,      0,      1},  
+        {"Display_Training_Center_Only",                &g_configInput.m_displayTrainingExampCenterOnly,                0,      0,          1,      0,      1},  
+        {"Whether_Save_Training_Samples",               &g_configInput.m_saveTrainingSamplesVideo,                      0,      0,          1,      0,      1},  
+        {"Whether_Display_Output_Video",                &g_configInput.m_displayOutputVideo,                            0,      0,          1,      0,      1},  
+        {"Wait_Before_TrackingEnd",                     &g_configInput.m_waitBeforeFinishTracking,                      0,      0,          1,      0,      1},        
+        {"Whether_Calculate_Tracking_Error",            &g_configInput.m_calculateTrackingError,                        0,      0,          1,      0,      1},  
 
         // Feature and classifier
-        {"Tracker_Feature_Type",            &g_configInput.m_trackerFeatureType,            0,      1,                1,            1,            3.0},
-        {"Use_HSV_Color",                    &g_configInput.m_useHSVColor,                    0,      0,                1,            0,            1.0},
-        {"Color_Number_Of_Bins",            &g_configInput.m_numofBinsColor,                0,      8,                1,            4,            16.0},
-        {"Tracker_Feature_Parameter",        &g_configInput.m_trackerFeatureParameter,        0,        0,              0,          0,            0},  
-        {"Tracker_Strong_Classifier_Type",    &g_configInput.m_trackerStrongClassifierType,    0,      1,                2,            1,            4.0},
-        {"Tracker_Weak_Classifier_Type",    &g_configInput.m_trackerWeakClassifierType,        0,      1,                1,            1,            3.0},
-        {"Percentage_Of_Weak_Classifiers_Selected",    &g_configInput.m_percentageOfWeakClassifiersSelected,0, 20,        1,            1,            100},
-        {"Percentage_Of_Weak_Classifier_Retained",    &g_configInput.m_percentageOfWeakClassifiersRetained,0, 10,        1,            1,            100},
+        {"Tracker_Feature_Type",                        &g_configInput.m_trackerFeatureType,                            0,      1,          1,      1,      3.0},
+        {"Use_HSV_Color",                               &g_configInput.m_useHSVColor,                                   0,      0,          1,      0,      1.0},
+        {"Color_Number_Of_Bins",                        &g_configInput.m_numofBinsColor,                                0,      8,          1,      4,      16.0},
+        {"Tracker_Feature_Parameter",                   &g_configInput.m_trackerFeatureParameter,                       0,      0,          0,      0,      0},  
+        {"Tracker_Strong_Classifier_Type",              &g_configInput.m_trackerStrongClassifierType,                   0,      1,          2,      1,      4.0},
+        {"Tracker_Weak_Classifier_Type",                &g_configInput.m_trackerWeakClassifierType,                     0,      1,          1,      1,      3.0},
+        {"Percentage_Of_Weak_Classifiers_Selected",     &g_configInput.m_percentageOfWeakClassifiersSelected,           0,      20,         1,      1,      100},
+        {"Percentage_Of_Weak_Classifier_Retained",      &g_configInput.m_percentageOfWeakClassifiersRetained,           0,      10,         1,      1,      100},
 
         //tracking setting
-        {"Local_Tracker_Type",                &g_configInput.m_localTrackerType,                0,        0,              2,          0,            0},  
-        {"Inner_Radius_For_Positive_Examples",&g_configInput.m_posRadiusTrain,                0,        4,              2,          1,            0},  
-        {"Initial_Radius_For_Positive_Examples",&g_configInput.m_initPosRadiusTrain,        0,        3,              2,          1,            0},  
-        {"Initial_Number_Of_Negative_Examples",        &g_configInput.m_initNumNegExampes,        0,        65,             2,          10,            0},          
-        {"Number_Of_Negative_Examples",        &g_configInput.m_numNegExamples,                0,        65,             2,          10,            0},  
-        {"Search_Window_Size",                &g_configInput.m_searchWindowSize,                0,        25,             2,          1,            0},  
-        {"Negative_Sampling_Strategy",        &g_configInput.m_negSampleStrategy,                0,      0,                1,          0,            1},  
+        {"Local_Tracker_Type",                          &g_configInput.m_localTrackerType,                              0,       0,         2,      0,      0},  
+        {"Inner_Radius_For_Positive_Examples",          &g_configInput.m_posRadiusTrain,                                0,       4,         2,      1,      0},  
+        {"Initial_Radius_For_Positive_Examples",        &g_configInput.m_initPosRadiusTrain,                            0,       3,         2,      1,      0},  
+        {"Initial_Number_Of_Negative_Examples",         &g_configInput.m_initNumNegExampes,                             0,       65,        2,      10,     0},          
+        {"Number_Of_Negative_Examples",                 &g_configInput.m_numNegExamples,                                0,       65,        2,      10,     0},  
+        {"Search_Window_Size",                          &g_configInput.m_searchWindowSize,                              0,       25,        2,      1,      0},  
+        {"Negative_Sampling_Strategy",                  &g_configInput.m_negSampleStrategy,                             0,       0,         1,      0,      1},  
     
         // Particle filter tracker parameters
-        {"Num_Of_Particles",                &g_configInput.m_numOfParticles,                0,        50,                2,          1,            0}, 
-        {"Particle_Filter_Std_Dev_X",        &g_configInput.m_PFTrackerStdDevX,                2,        5,                2,          0,            0}, 
-        {"Particle_Filter_Std_Dev_Y",        &g_configInput.m_PFTrackerStdDevY,                2,        5,                2,          0,            0}, 
-        {"Particle_Filter_Std_Dev_ScaleX",    &g_configInput.m_PFTrackerStdDevScaleX,            2,        0,                2,          0,            0}, 
-        {"Particle_Filter_Std_Dev_ScaleY",    &g_configInput.m_PFTrackerStdDevScaleY,            2,        0,                2,          0,            0}, 
-        {"PfTracker_Max_Num_Positive_Examples",    &g_configInput.m_PfTrackerMaxNumPositiveExamples,    0,        30,                2,          1,            0},         
-        {"PfTracker_Num_Disp_Particles",    &g_configInput.m_PFTrackerNumDispParticles,        0,        5,                2,          1,            0},         
-        {"PfTracker_Output_Trajectory_Option",&g_configInput.m_PFOutputTrajectoryOption,    0,        0,              1,          0,            1}, 
-        {"PfTracker_Positive_Example_Strategy",    &g_configInput.m_PfTrackerPositiveExampleStrategy,    0,    0,            2,            0,            0},                
-        {"PfTracker_Negative_Example_Strategy",    &g_configInput.m_PfTrackerNegativeExampleStrategy,    0,    0,            2,            0,            0},                
+        {"Num_Of_Particles",                            &g_configInput.m_numOfParticles,                                0,        50,       2,      1,      0}, 
+        {"Particle_Filter_Std_Dev_X",                   &g_configInput.m_PFTrackerStdDevX,                              2,        5,        2,      0,      0}, 
+        {"Particle_Filter_Std_Dev_Y",                   &g_configInput.m_PFTrackerStdDevY,                              2,        5,        2,      0,      0}, 
+        {"Particle_Filter_Std_Dev_ScaleX",              &g_configInput.m_PFTrackerStdDevScaleX,                         2,        0,        2,      0,      0}, 
+        {"Particle_Filter_Std_Dev_ScaleY",              &g_configInput.m_PFTrackerStdDevScaleY,                         2,        0,        2,      0,      0}, 
+        {"PfTracker_Max_Num_Positive_Examples",         &g_configInput.m_PfTrackerMaxNumPositiveExamples,               0,        30,       2,      1,      0},         
+        {"PfTracker_Num_Disp_Particles",                &g_configInput.m_PFTrackerNumDispParticles,                     0,        5,        2,      1,      0},         
+        {"PfTracker_Output_Trajectory_Option",          &g_configInput.m_PFOutputTrajectoryOption,                      0,        0,        1,      0,      1}, 
+        {"PfTracker_Positive_Example_Strategy",         &g_configInput.m_PfTrackerPositiveExampleStrategy,              0,        0,        2,      0,      0},                
+        {"PfTracker_Negative_Example_Strategy",         &g_configInput.m_PfTrackerNegativeExampleStrategy,              0,        0,        2,      0,      0},                
         
         // Fusion setting
-        {"Geometric_Fusion_Type",            &g_configInput.m_geometricFusionType,            0,        0,              2,          0,            0},  
-        {"Save_Ground_Particles_Image",        &g_configInput.m_saveGroundParticlesImage,        0,        0,                1,          0,            1},  
-        {"Save_Ground_Plane_KF_Image",        &g_configInput.m_saveGroundPlaneKFImage,        0,        0,                1,          0,            1},          
-        {"Display_Ground_GMM_Centers",        &g_configInput.m_displayGMMCenters,                0,        0,                1,          0,            1},  
-        {"Display_Ground_Particles_Image",        &g_configInput.m_displayGroundParticlesImage,0,        0,                1,          0,            1},  
-        {"Display_Ground_Plane_KF_Image",        &g_configInput.m_displayGroundPlaneKFImage,    0,        0,                1,          0,            1},  
-        {"Appearance_Fusion_Type",            &g_configInput.m_appearanceFusionType,            0,      1,                2,            0,            0},
-        {"Appearance_Fusion_Strong_Classifier_Type",&g_configInput.m_appearanceFusionStrongClassifierType,    0,    1,    1,            1,            3.0},
-        {"Appearance_Fusion_Weak_Classifier_Type",    &g_configInput.m_appearanceFusionWeakClassifierType,    0,  1,    1,            1,            3.0},
-        {"Enable_Cross_Camera_Occlusion_Handle",&g_configInput.m_enableCrossCameraOcclusionHandling,    0,    0,      1,          0,            1},  
-        {"Enable_Cross_Camera_Auto_Initialization",&g_configInput.m_enableCrossCameraAutoInitialization,0,    0,      1,          0,            1},  
-        {"Percentage_Of_Weak_Classifiers_Selected_AF",&g_configInput.m_AFpercentageOfWeakClassifiersSelected,0, 20,    1,            1,            100},
-        {"Percentage_Of_Weak_Classifier_Retained_AF",&g_configInput.m_AFpercentageOfWeakClassifiersRetained,0, 10,    1,            1,            100},
+        {"Geometric_Fusion_Type",                       &g_configInput.m_geometricFusionType,                           0,        0,        2,      0,      0},  
+        {"Save_Ground_Particles_Image",                 &g_configInput.m_saveGroundParticlesImage,                      0,        0,        1,      0,      1},  
+        {"Save_Ground_Plane_KF_Image",                  &g_configInput.m_saveGroundPlaneKFImage,                        0,        0,        1,      0,      1},          
+        {"Display_Ground_GMM_Centers",                  &g_configInput.m_displayGMMCenters,                             0,        0,        1,      0,      1},  
+        {"Display_Ground_Particles_Image",              &g_configInput.m_displayGroundParticlesImage,                   0,        0,        1,      0,      1},  
+        {"Display_Ground_Plane_KF_Image",               &g_configInput.m_displayGroundPlaneKFImage,                     0,        0,        1,      0,      1},  
+        {"Appearance_Fusion_Type",                      &g_configInput.m_appearanceFusionType,                          0,        1,        2,      0,      0},
+        {"Appearance_Fusion_Strong_Classifier_Type",    &g_configInput.m_appearanceFusionStrongClassifierType,          0,        1,        1,      1,      3.0},
+        {"Appearance_Fusion_Weak_Classifier_Type",      &g_configInput.m_appearanceFusionWeakClassifierType,            0,        1,        1,      1,      3.0},
+        {"Enable_Cross_Camera_Occlusion_Handle",        &g_configInput.m_enableCrossCameraOcclusionHandling,            0,        0,        1,      0,      1},  
+        {"Enable_Cross_Camera_Auto_Initialization",     &g_configInput.m_enableCrossCameraAutoInitialization,           0,        0,        1,      0,      1},  
+        {"Percentage_Of_Weak_Classifiers_Selected_AF",  &g_configInput.m_AFpercentageOfWeakClassifiersSelected,         0,        20,       1,      1,      100},
+        {"Percentage_Of_Weak_Classifier_Retained_AF",   &g_configInput.m_AFpercentageOfWeakClassifiersRetained,         0,        10,       1,      1,      100},
 
-        {"Appearance_Fusion_Num_Of_Positive_Examples",&g_configInput.m_AFNumberOfPositiveExamples,0,30,                1,            1,            100},
-        {"Appearance_Fusion_Num_Of_Negative_Examples",&g_configInput.m_AFNumberOfNegativeExamples,0,50,                1,            1,            100},
-        {"Appearance_Fusion_Refresh_Rate",    &g_configInput.m_AFRefreshRate,                    0,        1,                1,            1,            100},
-        {NULL,                                NULL,                                            -1,     0.0,            0,          0.0,        0.0}
+        {"Appearance_Fusion_Num_Of_Positive_Examples",  &g_configInput.m_AFNumberOfPositiveExamples,                    0,        30,       1,      1,      100},
+        {"Appearance_Fusion_Num_Of_Negative_Examples",  &g_configInput.m_AFNumberOfNegativeExamples,                    0,        50,       1,      1,      100},
+        {"Appearance_Fusion_Refresh_Rate",              &g_configInput.m_AFRefreshRate,                                 0,        1,        1,      1,      100},
+        {NULL,                                NULL,                                                                     -1,       0.0,      0,      0.0,    0.0}
     };
 
     static void Usage(void)
@@ -118,8 +118,6 @@ namespace MultipleCameraTracking
           i++;
       return -1;
     }
-
-
 
     /*!
      ***********************************************************************
