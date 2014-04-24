@@ -22,6 +22,14 @@ MultiCameraTracker.bat
 
 ./MultiCameraTracker.sh
 
+Compilation
+------------
+Windows: Build the Visual studio project.
+
+Linux: Run the make file inside the "obj" folder.
+
+Note: Make sure Intel IPP, OpenCv 2.3.1 and Boost libraries are located in appropriate folders.
+
 
 ### Contact ###
 [1] Santhoshkumar Sunderrajan( santhosh@ece.ucsb.edu)
