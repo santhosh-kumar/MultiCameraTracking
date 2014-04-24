@@ -50,4 +50,4 @@ If you use the code in any of your research works, please cite the following pap
 ~~~
 
 ### Disclaimer ###
-I may have used some good codes from various sources, please feel free to notify to me if you find a piece of code that I need to acknowledge.
+I may have used some good codes from various sources, please feel free to notify me if you find a piece of code that I need to acknowledge.
