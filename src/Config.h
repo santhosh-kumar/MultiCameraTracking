@@ -12,7 +12,7 @@ namespace MultipleCameraTracking
     #define STRING_SIZE                    1000
     #define MAX_ITEMS_TO_PARSE            10000
     #define MAX_NUMBER_OF_VIEWS            100
-    #define DEFAULTCONFIGFILENAME        "MultiCameraTracking.cfg"
+    #define DEFAULTCONFIGFILENAME        "config.cfg"
     
     //#define ENABLE_PARTICLE_LOG  //un-define to disable the logging of particle information
 

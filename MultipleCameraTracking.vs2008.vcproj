@@ -271,7 +271,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="2"
 				AdditionalIncludeDirectories="C:\boost_1_46_1"
-				PreprocessorDefinitions="WIN64,_WINDOWS,NDEBUG"
+				PreprocessorDefinitions="WIN64,_WINDOWS,NDEBUG,IPP_61"
 				ExceptionHandling="0"
 				Detect64BitPortabilityProblems="false"
 			/>
@@ -286,6 +286,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\$(ProjectName).exe"
 			/>
 			<Tool
 				Name="VCALinkTool"
