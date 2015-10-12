@@ -29,6 +29,11 @@ Linux: Run the make file inside the "obj" folder.
 
 Note: Make sure Intel IPP, OpenCv 2.3.1 and Boost libraries are located in appropriate folders.
 
+Data
+------------
+Here is the sample data folder: https://www.dropbox.com/s/gnheat18lotoi2k/data.tar.gz?dl=0
+
+Note: Follow a similar folder structure for new scenarios.
 
 ### Contact ###
 [1] Santhoshkumar Sunderrajan( santhosh@ece.ucsb.edu)
