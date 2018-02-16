@@ -37,7 +37,7 @@ Note: Follow a similar folder structure for new scenarios.
 
 ### Contact ###
 [1] Santhoshkumar Sunderrajan( santhosh@ece.ucsb.edu)
-Website: http://vision.ece.ucsb.edu/~santhosh/
+Website: http://santhoshsunderrajan.com/
 
 ### Bibtex ###
 If you use the code in any of your research works, please cite the following papers:
